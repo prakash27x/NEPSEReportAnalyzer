@@ -1,0 +1,137 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(224, 228, 232, 0.6);
+}
+
+/* Compact metric cards (dashboard) */
+.metric-card {
+    padding: 12px 14px;
+    border: 1px solid #e1e3e4;
+    border-radius: 12px;
+    background: #edeeef;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-height: 72px;
+    justify-content: center;
+}
+
+.metric-label {
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #45474d;
+}
+
+.metric-value {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #051125;
+    word-break: break-word;
+}
+
+.metric-growth {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    min-height: 16px;
+}
+
+/* Hide the placeholder growth dash to avoid empty space */
+.metric-growth:empty,
+.metric-growth:not(.has-data) {
+    visibility: hidden;
+}
+
+
+.dashboard-loading {
+    opacity: 0.65;
+    transition: opacity 0.2s ease;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #9ca3af;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #6b7280;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #9ca3af #f3f4f6;
+}
+
+/* Floating Chat Button */
+#floating-chat-btn {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+    background-color: #10b981 !important;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+#floating-chat-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(16, 185, 129, 0.6);
+    background-color: #059669 !important;
+}
+
+/* Chat Window Header */
+#chat-window .bg-primary {
+    background-color: #10b981 !important;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+#floating-chat-btn {
+    animation: pulse 2s infinite;
+}
+
+#floating-chat-btn:hover {
+    animation: none;
+}
